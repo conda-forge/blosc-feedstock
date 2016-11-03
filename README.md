@@ -3,7 +3,7 @@ About blosc
 
 Home: https://github.com/Blosc/c-blosc
 
-Package license: Apache 2.0
+Package license: BSD 3-Clause License
 
 Feedstock license: BSD 3-Clause
 
