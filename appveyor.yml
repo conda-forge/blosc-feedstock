@@ -76,6 +76,8 @@ install:
     - cmd: set PYTHONUNBUFFERED=1
 
     - cmd: conda install -n root --quiet --yes obvious-ci
+    - cmd: conda install -n root --quiet --yes vs2008_express_vc_python_patch
+    - cmd: setup_x64
     - cmd: conda install -n root --quiet --yes conda-forge-build-setup
     - cmd: run_conda_forge_build_setup
 
