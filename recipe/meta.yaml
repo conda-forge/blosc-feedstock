@@ -20,11 +20,11 @@ requirements:
     - python       # [win]
     - toolchain
     - cmake
-    - zlib 1.2.11
-    - snappy
+    - snappy       # [unix]
+    - zlib 1.2.*
   run:
-    - snappy
-    - zlib 1.2.11
+    - snappy       # [unix]
+    - zlib 1.2.*
 
 test:
   requires:
