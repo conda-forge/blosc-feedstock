@@ -3,7 +3,7 @@
 mkdir build
 cd build
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_OSX_DEPLOYMENT_TARGET="" ..
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
 
 cmake --build .
 ctest
