@@ -31,9 +31,11 @@ test:
 
 about:
   home: https://github.com/Blosc/c-blosc
-  license: Apache 2.0
+  license: BSD 3-Clause License
+  license_file: LICENSES/BLOSC.txt
   summary: 'A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`'
 
 extra:
   recipe-maintainers:
     - danielfrg
+    - FrancescElies
