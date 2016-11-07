@@ -1,8 +1,9 @@
+{% set name = "blosc" %}
 {% set version = "1.11.1" %}
 {% set sha256 = "d15937961d37b0780b8fb0641483eb9f6d4c379f88ac7ee84ff5dd06c2b72360" %}
 
 package:
-  name: blosc
+  name: {{ name }}
   version: {{ version }}
 
 source:
