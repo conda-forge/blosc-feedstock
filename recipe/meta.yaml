@@ -10,10 +10,11 @@ source:
 
 build:
   number: 2
+  skip: True  # [win64 and py27]
   features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py35]
+    - vc9     # [win and py27]
+    - vc10    # [win and py34]
+    - vc14    # [win and py35]
 
 requirements:
   build:
