@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-cmake -G "%CMAKE_GENERATOR%" ^
+cmake -G "NMake Makefiles" ^
          -DCMAKE_BUILD_TYPE=Release ^
          -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
          ..
