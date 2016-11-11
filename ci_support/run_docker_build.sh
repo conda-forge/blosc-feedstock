@@ -44,6 +44,9 @@ source run_conda_forge_build_setup
 # Install conda-build 2.0.x.
 conda install --yes --quiet conda-build=2
 
+# Install conda 4.2.x
+conda install --yes --quiet conda=4.2
+
 # Embarking on 1 case(s).
     conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root conda-forge --channel=main || exit 1
