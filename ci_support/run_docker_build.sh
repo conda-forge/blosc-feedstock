@@ -13,6 +13,7 @@ docker info
 config=$(cat <<CONDARC
 
 channels:
+ - jjhelmus/label/bootstrap
  - conda-forge
  - defaults # As we need conda-build
 
