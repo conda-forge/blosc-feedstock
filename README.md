@@ -3,7 +3,7 @@ About blosc
 
 Home: https://github.com/Blosc/c-blosc
 
-Package license: BSD 3-Clause License
+Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -31,7 +31,6 @@ It is possible to list all of the versions of `blosc` available on your platform
 ```
 conda search blosc --channel conda-forge
 ```
-
 
 
 About conda-forge

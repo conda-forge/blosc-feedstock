@@ -32,7 +32,7 @@ test:
 
 about:
   home: https://github.com/Blosc/c-blosc
-  license: BSD 3-Clause License
+  license: BSD 3-Clause
   license_file: LICENSES/BLOSC.txt
   summary: 'A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`'
 
