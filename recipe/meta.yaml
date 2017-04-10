@@ -9,20 +9,27 @@ source:
   sha256: 6349ab927705a451439b2e23ec5c3473f6b7e444e6d4aafaff76b789713e9fee
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 2
+  skip: True  # [win64 and py27]
+  features:
+    - vc9     # [win and py27]
+    - vc10    # [win and py34]
+    - vc14    # [win and py35]
 
 requirements:
   build:
+    - python       # [win]
     - toolchain
     - cmake
+    - snappy       # [unix]
     - zlib 1.2.*
-    - snappy
   run:
-    - snappy
+    - snappy       # [unix]
     - zlib 1.2.*
 
 test:
+  requires:
+    - python {{ environ['PY_VER'] + '.*' }}          # [win]
   commands:
     - test -e $PREFIX/include/blosc.h                # [unix]
     - test -e $PREFIX/include/blosc-export.h         # [unix]
@@ -40,3 +47,4 @@ extra:
   recipe-maintainers:
     - danielfrg
     - FrancescElies
+    - jakirkham
