@@ -13,6 +13,7 @@ docker info
 config=$(cat <<CONDARC
 
 channels:
+ - jjhelmus/label/bootstrap
  - conda-forge
  - defaults
 
@@ -42,6 +43,12 @@ conda clean --lock
 
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
+
+# Install conda-build 2.0.x.
+conda install --yes --quiet conda-build=2
+
+# Install conda 4.2.x
+#conda install --yes --quiet conda=4.2
 
 # Embarking on 1 case(s).
     conda build /recipe_root --quiet || exit 1
