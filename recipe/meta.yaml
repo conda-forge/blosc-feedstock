@@ -9,18 +9,18 @@ source:
   sha256: 77ea34f882189f87b68d9b25619462f914f61c8ae152ee5ee5e9971ea36661ec
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - toolchain
     - cmake
-    - zlib 1.2.*
+    - zlib 1.2.11
     - snappy
   run:
     - snappy
-    - zlib 1.2.*
+    - zlib 1.2.11
 
 test:
   commands:
@@ -29,6 +29,8 @@ test:
     - test -e $PREFIX/lib/libblosc.a                 # [unix]
     - test -e $PREFIX/lib/libblosc.dylib             # [osx]
     - test -e $PREFIX/lib/libblosc.so                # [linux]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/Blosc/c-blosc
