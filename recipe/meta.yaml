@@ -9,23 +9,21 @@ source:
   sha256: 77ea34f882189f87b68d9b25619462f914f61c8ae152ee5ee5e9971ea36661ec
 
 build:
-  number: 2
-  skip: True  # [win64 and py27]
+  number: 1
+  skip: true  # [win and py<35]
   features:
-    - vc9     # [win and py27]
-    - vc10    # [win and py34]
-    - vc14    # [win and py35]
+    - vc14  # [win]
 
 requirements:
   build:
-    - python       # [win]
+    - python  # [win]
     - toolchain
     - cmake
-    - snappy       # [unix]
-    - zlib 1.2.*
+    - zlib 1.2.11
+    - snappy  # [unix]
   run:
-    - snappy       # [unix]
-    - zlib 1.2.*
+    - snappy  # [unix]
+    - zlib 1.2.11
 
 test:
   requires:
