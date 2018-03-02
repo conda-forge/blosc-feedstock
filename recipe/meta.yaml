@@ -16,10 +16,10 @@ requirements:
   build:
     - toolchain
     - cmake
-    - snappy
+    - snappy 1.1.6
     - zlib 1.2.11
   run:
-    - snappy
+    - snappy 1.1.6
     - zlib 1.2.11
 
 test:
