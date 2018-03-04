@@ -7,22 +7,32 @@ package:
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
   sha256: 68b8c157beae5409e039ae266ad6c14b55a69a4899dba1f0df6c806a2f36360d
+  patches:
+    ####################################################
+    # Fix an issue with C89 compatibility.             #
+    #                                                  #
+    # xref: https://github.com/Blosc/c-blosc/pull/221  #
+    ####################################################
+    - PR_221.patch
 
 build:
-  number: 0
-  skip: True  # [win]
+  number: 1
+  skip: True  # [win and py35]
+  features:
+    - vc9     # [win and py27]
+    - vc10    # [win and py34]
+    - vc14    # [win and py35]
+    - vc14    # [win and py36]
 
 requirements:
   build:
+    - python       # [win]
     - toolchain
     - cmake
-    - snappy 1.1.6
-    - zlib 1.2.11
-  run:
-    - snappy 1.1.6
-    - zlib 1.2.11
 
 test:
+  requires:
+    - python {{ environ['PY_VER'] + '.*' }}          # [win]
   commands:
     - test -e $PREFIX/include/blosc.h                # [unix]
     - test -e $PREFIX/include/blosc-export.h         # [unix]
@@ -42,3 +52,4 @@ extra:
   recipe-maintainers:
     - danielfrg
     - FrancescElies
+    - jakirkham
