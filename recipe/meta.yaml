@@ -7,6 +7,13 @@ package:
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
   sha256: 68b8c157beae5409e039ae266ad6c14b55a69a4899dba1f0df6c806a2f36360d
+  patches:
+    ####################################################
+    # Fix an issue with C89 compatibility.             #
+    #                                                  #
+    # xref: https://github.com/Blosc/c-blosc/pull/221  #
+    ####################################################
+    - PR_221.patch
 
 build:
   number: 0
