@@ -14,14 +14,16 @@ Summary: A blocking, shuffling and loss-less compression library that can be fas
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/blosc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/blosc-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/blosc-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/blosc-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/blosc-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/blosc-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/blosc-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/blosc-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/blosc-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/blosc-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/blosc-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/blosc-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/blosc/badges/version.svg)](https://anaconda.org/conda-forge/blosc)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/blosc/badges/downloads.svg)](https://anaconda.org/conda-forge/blosc)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-blosc-green.svg)](https://anaconda.org/conda-forge/blosc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/blosc.svg)](https://anaconda.org/conda-forge/blosc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/blosc.svg)](https://anaconda.org/conda-forge/blosc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/blosc.svg)](https://anaconda.org/conda-forge/blosc) |
 
 Installing blosc
 ================
