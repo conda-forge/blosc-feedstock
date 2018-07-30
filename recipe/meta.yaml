@@ -27,9 +27,6 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages -p "$PREFIX" $PKG_NAME      # [unix]
-    - conda inspect objects -p "$PREFIX" $PKG_NAME       # [osx]
-
     - test -e $PREFIX/include/blosc.h                    # [unix]
     - test -e $PREFIX/include/blosc-export.h             # [unix]
     - test -e $PREFIX/lib/libblosc.a                     # [unix]
