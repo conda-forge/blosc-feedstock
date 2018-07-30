@@ -15,16 +15,16 @@ cmake -G "NMake Makefiles" ^
       -DBUILD_TESTS:BOOL=ON ^
       -DBUILD_BENCHMARKS:BOOL=OFF ^
       "%SRC_DIR%"
-if %ERRORLEVEL% neq 0 exit 1
+if errorlevel 1 exit 1
 
 cmake --build . --config Release
-if %ERRORLEVEL% neq 0 exit 1
+if errorlevel 1 exit 1
 
 ctest -C release
-if %ERRORLEVEL% neq 0 exit 1
+if errorlevel 1 exit 1
 
 cmake --build . --target INSTALL --config Release
-if %ERRORLEVEL% neq 0 exit 1
+if errorlevel 1 exit 1
 
 del %LIBRARY_BIN%\msvc*.dll
 del %LIBRARY_BIN%\Microsoft.*
