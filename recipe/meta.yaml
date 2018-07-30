@@ -26,8 +26,6 @@ requirements:
   host:
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '.*' }}              # [win]
   commands:
     - conda inspect linkages -p "$PREFIX" $PKG_NAME      # [unix]
     - conda inspect objects -p "$PREFIX" $PKG_NAME       # [osx]
