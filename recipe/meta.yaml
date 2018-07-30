@@ -1,4 +1,4 @@
-{% set version = "1.14.0" %}
+{% set version = "1.14.4" %}
 
 package:
   name: blosc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
-  sha256: 68b8c157beae5409e039ae266ad6c14b55a69a4899dba1f0df6c806a2f36360d
+  sha256: 42a85de871d142cdc89b607a90cceeb0eab60d995f6fae8d44aae397ab414002
   patches:
     ####################################################
     # Fix an issue with C89 compatibility.             #
@@ -16,7 +16,7 @@ source:
     - PR_221.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
