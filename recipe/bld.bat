@@ -17,11 +17,15 @@ cmake -G "NMake Makefiles" ^
       "%SRC_DIR%"
 if errorlevel 1 exit 1
 
-cmake --build .
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
-ctest
+ctest -C release
 if errorlevel 1 exit 1
 
-cmake --build . --target install
+cmake --build . --target install --config Release
 if errorlevel 1 exit 1
+
+del %LIBRARY_BIN%\msvc*.dll
+del %LIBRARY_BIN%\Microsoft.*
+move %LIBRARY_LIB%\blosc.dll %LIBRARY_BIN%\

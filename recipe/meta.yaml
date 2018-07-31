@@ -7,40 +7,28 @@ package:
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
   sha256: 7217659d8ef383999d90207a98c9a2555f7b46e10fa7d21ab5a1f92c861d18f7
-  patches:
-    ####################################################
-    # Fix an issue with C89 compatibility.             #
-    #                                                  #
-    # xref: https://github.com/Blosc/c-blosc/pull/221  #
-    ####################################################
-    - PR_221.patch
 
 build:
   number: 0
-  skip: True  # [win and py35]
-  features:
-    - vc9     # [win and py27]
-    - vc10    # [win and py34]
-    - vc14    # [win and py35]
-    - vc14    # [win and py36]
 
 requirements:
   build:
-    - python       # [win]
-    - toolchain
     - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '.*' }}          # [win]
   commands:
-    - test -e $PREFIX/include/blosc.h                # [unix]
-    - test -e $PREFIX/include/blosc-export.h         # [unix]
-    - test -e $PREFIX/lib/libblosc.a                 # [unix]
-    - test -e $PREFIX/lib/libblosc.dylib             # [osx]
-    - test -e $PREFIX/lib/libblosc.so                # [linux]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - test -e $PREFIX/include/blosc.h                    # [unix]
+    - test -e $PREFIX/include/blosc-export.h             # [unix]
+    - test -e $PREFIX/lib/libblosc.a                     # [unix]
+    - test -e $PREFIX/lib/libblosc${SHLIB_EXT}           # [unix]
+    - if not exist %LIBRARY_INC%\\blosc.h exit 1         # [win]
+    - if not exist %LIBRARY_INC%\\blosc-export.h exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\\blosc.dll exit 1       # [win]
+    - if not exist %LIBRARY_LIB%\\blosc.lib exit 1       # [win]
+    - if not exist %LIBRARY_LIB%\\libblosc.lib exit 1    # [win]
 
 about:
   home: https://github.com/Blosc/c-blosc
