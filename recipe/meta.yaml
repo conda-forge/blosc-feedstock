@@ -1,14 +1,12 @@
-{% set version = "1.15.0" %}
+{% set version = "1.15.1" %}
 
 package:
   name: blosc
   version: {{ version }}
 
 source:
-  url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
-  sha256: dbbb01f9fedcdf2c2ff73296353a9253f44ce9de89c081cbd8146170dce2ba8f
-  patches:
-    - stdint.h.patch  # FIXME remove this once the patch is released from upstream
+  url: https://github.com/Blosc/c-blosc/archive/{{ version }}.tar.gz
+  sha256: 3c3e0308110c8164550e0d42ff80b8d756a70cb16c358a7cb9f57d63e87ceaf0
 
 build:
   number: 1000
