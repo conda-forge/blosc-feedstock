@@ -9,7 +9,9 @@ source:
   sha256: 3c3e0308110c8164550e0d42ff80b8d756a70cb16c358a7cb9f57d63e87ceaf0
 
 build:
-  number: 1000
+  number: 1001
+  run_exports:
+    - {{ pin_compatible('blosc') }}
 
 requirements:
   build:
