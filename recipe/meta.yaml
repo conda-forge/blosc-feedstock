@@ -9,13 +9,14 @@ source:
   sha256: bec56cb0956725beb93d50478e918aca09f489f1bfe543dbd3087827a7344396
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('blosc') }}
 
 requirements:
   build:
     - cmake
+    - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
