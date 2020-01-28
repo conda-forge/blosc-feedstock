@@ -1,4 +1,4 @@
-{% set version = "1.17.0" %}
+{% set version = "1.17.1" %}
 
 package:
   name: blosc
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
-  sha256: 75d98c752b8cf0d4a6380a3089d56523f175b0afa2d0cf724a1bd0a1a8f975a4
+  sha256: 19a6948b579c27e8ac440b4f077f99fc90e7292b1d9cb896bec0fd781d68fba2
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('blosc') }}
 
