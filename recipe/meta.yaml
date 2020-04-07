@@ -1,4 +1,4 @@
-{% set version = "1.17.1" %}
+{% set version = "1.18.1" %}
 
 package:
   name: blosc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
-  sha256: 19a6948b579c27e8ac440b4f077f99fc90e7292b1d9cb896bec0fd781d68fba2
+  sha256: 18730e3d1139aadf4002759ef83c8327509a9fca140661deb1d050aebba35afb
 
 build:
   number: 0
@@ -37,7 +37,7 @@ about:
   home: https://github.com/Blosc/c-blosc
   license: BSD 3-Clause
   license_file: LICENSES/BLOSC.txt
-  summary: 'A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`'
+  summary: A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`
 
 extra:
   recipe-maintainers:
