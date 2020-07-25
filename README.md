@@ -5,7 +5,7 @@ Home: https://github.com/Blosc/c-blosc
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`
 
