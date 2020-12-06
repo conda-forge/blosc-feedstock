@@ -3,7 +3,7 @@
 mkdir build
 cd build
 
-cmake -G "Unix Makefiles" \
+cmake ${CMAKE_ARGS} -G "Unix Makefiles" \
       -DCMAKE_BUILD_TYPE="Release" \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
       -DCMAKE_POSITION_INDEPENDENT_CODE=1 \
@@ -14,5 +14,7 @@ cmake -G "Unix Makefiles" \
       "${SRC_DIR}"
 
 cmake --build .
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 ctest
+fi
 cmake --build . --target install
