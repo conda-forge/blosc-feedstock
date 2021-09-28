@@ -14,6 +14,7 @@ cmake -G "NMake Makefiles" ^
       -DBUILD_SHARED:BOOL=ON ^
       -DBUILD_TESTS:BOOL=ON ^
       -DBUILD_BENCHMARKS:BOOL=OFF ^
+      -DDEACTIVATE_SNAPPY:BOOL=OFF ^
       "%SRC_DIR%"
 if errorlevel 1 exit 1
 
