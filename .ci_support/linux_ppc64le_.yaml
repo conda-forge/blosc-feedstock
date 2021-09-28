@@ -14,6 +14,8 @@ cxx_compiler_version:
 - '9'
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
+snappy:
+- '1'
 target_platform:
 - linux-ppc64le
 zip_keys:
