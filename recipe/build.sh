@@ -14,7 +14,7 @@ cmake ${CMAKE_ARGS} -G "Unix Makefiles" \
       -DDEACTIVATE_SNAPPY=0 \
       "${SRC_DIR}"
 
-cmake --build .
+cmake --build . -j${CPU_COUNT}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 ctest
 fi
