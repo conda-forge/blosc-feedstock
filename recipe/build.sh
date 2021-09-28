@@ -14,7 +14,9 @@ cmake ${CMAKE_ARGS} -G "Unix Makefiles" \
       -DDEACTIVATE_SNAPPY=0 \
       "${SRC_DIR}"
 
-cmake --build . -j${CPU_COUNT}
+# Building with multiple CPUs gave me (hmaarrfk)
+# a hard time enabling snappy support
+cmake --build .
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 ctest
 fi
