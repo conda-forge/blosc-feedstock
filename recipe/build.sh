@@ -11,6 +11,7 @@ cmake ${CMAKE_ARGS} -G "Unix Makefiles" \
       -DBUILD_SHARED=1 \
       -DBUILD_TESTS=1 \
       -DBUILD_BENCHMARKS=0 \
+      -DDEACTIVATE_SNAPPY=0 \
       "${SRC_DIR}"
 
 cmake --build .
