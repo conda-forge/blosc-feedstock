@@ -6,7 +6,7 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 
-cp %LIBRARY_BIN%/liblz4.dll %LIBRARY_LIB%/
+copy %LIBRARY_BIN%\liblz4.dll %LIBRARY_LIB%
 
 cmake -LAH -G "NMake Makefiles" ^
       -DCMAKE_BUILD_TYPE:STRING="Release" ^
