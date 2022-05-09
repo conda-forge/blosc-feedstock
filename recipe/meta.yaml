@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
   sha256: f387149eab24efa01c308e4cba0f59f64ccae57292ec9c794002232f7903b55b
+  patches:
+    - 0000-lz4-windows-cmake.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('blosc') }}
 
@@ -20,7 +22,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - lz4-c
     - snappy
+    - zlib
+    - zstd
 
 test:
   commands:
@@ -45,3 +50,4 @@ extra:
     - FrancescElies
     - jakirkham
     - hmaarrfk
+    - zklaus
