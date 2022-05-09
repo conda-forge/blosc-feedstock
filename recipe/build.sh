@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf internal-complibs
+
 mkdir build
 cd build
 
@@ -12,6 +14,9 @@ cmake ${CMAKE_ARGS} -G "Unix Makefiles" \
       -DBUILD_TESTS=1 \
       -DBUILD_BENCHMARKS=0 \
       -DDEACTIVATE_SNAPPY=0 \
+      -DPREFER_EXTERNAL_LZ4=ON \
+      -DPREFER_EXTERNAL_ZLIB=ON \
+      -DPREFER_EXTERNAL_ZSTD=ON \
       "${SRC_DIR}"
 
 cmake --build .

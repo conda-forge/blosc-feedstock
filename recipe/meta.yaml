@@ -20,7 +20,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - lz4
     - snappy
+    - zlib
+    - zstd
 
 test:
   commands:
