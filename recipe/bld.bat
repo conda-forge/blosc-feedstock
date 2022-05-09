@@ -6,9 +6,10 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 
+cp %LIBRARY_BIN%/liblz4.dll %LIBRARY_LIB%/
+
 cmake -LAH -G "NMake Makefiles" ^
       -DCMAKE_BUILD_TYPE:STRING="Release" ^
-      -DCMAKE_PREFIX_PATH:PATH="%PREFIX%" ^
       -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON ^
