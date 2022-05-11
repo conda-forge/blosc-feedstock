@@ -11,7 +11,7 @@ source:
     - 0000-lz4-windows-cmake.patch
 
 build:
-  number: 1
+  number: 2
   run_exports:
     - {{ pin_subpackage('blosc') }}
 
@@ -31,13 +31,13 @@ test:
   commands:
     - test -e $PREFIX/include/blosc.h                    # [unix]
     - test -e $PREFIX/include/blosc-export.h             # [unix]
-    - test -e $PREFIX/lib/libblosc.a                     # [unix]
+    - test ! -e $PREFIX/lib/libblosc.a                   # [unix]
     - test -e $PREFIX/lib/libblosc${SHLIB_EXT}           # [unix]
     - if not exist %LIBRARY_INC%\\blosc.h exit 1         # [win]
     - if not exist %LIBRARY_INC%\\blosc-export.h exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\blosc.dll exit 1       # [win]
     - if not exist %LIBRARY_LIB%\\blosc.lib exit 1       # [win]
-    - if not exist %LIBRARY_LIB%\\libblosc.lib exit 1    # [win]
+    - if exist %LIBRARY_LIB%\\libblosc.lib exit 1        # [win]
 
 about:
   home: https://github.com/Blosc/c-blosc
