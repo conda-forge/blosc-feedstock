@@ -11,7 +11,7 @@ source:
     - 0000-lz4-windows-cmake.patch
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage('blosc') }}
 

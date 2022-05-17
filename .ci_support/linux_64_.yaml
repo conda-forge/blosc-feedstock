@@ -17,8 +17,6 @@ docker_image:
 lz4_c:
 - 1.9.3
 pin_run_as_build:
-  lz4-c:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
 snappy:
