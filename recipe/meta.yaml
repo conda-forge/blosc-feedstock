@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/Blosc/c-blosc/archive/v{{ version }}.tar.gz
   sha256: e5b4ddb4403cbbad7aab6e9ff55762ef298729c8a793c6147160c771959ea2aa
-  patches:
-    - 0000-lz4-windows-cmake.patch
 
 build:
   number: 0
