@@ -1,11 +1,11 @@
-About blosc
-===========
+About blosc-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blosc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Blosc/c-blosc
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blosc-feedstock/blob/main/LICENSE.txt)
 
 Summary: A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`
 
