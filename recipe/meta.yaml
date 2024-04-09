@@ -9,7 +9,7 @@ source:
   sha256: 32e61961bbf81ffea6ff30e9d70fca36c86178afd3e3cfa13376adec8c687509
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('blosc') }}
 
@@ -18,6 +18,7 @@ requirements:
     - cmake
     - make  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - lz4-c
