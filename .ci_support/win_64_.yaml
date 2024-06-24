@@ -15,6 +15,6 @@ snappy:
 target_platform:
 - win-64
 zlib:
-- '1.2'
+- '1'
 zstd:
 - '1.5'
