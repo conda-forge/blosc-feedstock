@@ -6,7 +6,7 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 
-cmake -LAH -G "NMake Makefiles" ^
+cmake %CMAKE_ARGS% -LAH -G "NMake Makefiles" ^
       -DCMAKE_BUILD_TYPE:STRING="Release" ^
       -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
@@ -25,7 +25,9 @@ if errorlevel 1 exit 1
 cmake --build . --config Release
 if errorlevel 1 exit 1
 
+if not "%CONDA_BUILD_SKIP_TESTS%"=="1" (
 ctest -C release
+)
 if errorlevel 1 exit 1
 
 cmake --build . --target install --config Release
